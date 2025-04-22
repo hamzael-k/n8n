@@ -46,7 +46,7 @@
                     { "service": "Carte Mastercard", "fee": "49 DH", "notes": "Achat initial" },
                     { "service": "Inscription", "fee": "18 DH", "notes": "Demande d'inscription" },
                     { "service": "Finalisation inscription", "fee": "12 DH", "notes": "Paiement en agence" },
-                    { "service": "Relevé bancaire mensuel", "fee": "5 DH", "notes": "Relevé imprimé en agence" }
+                    { "service": "Relevé bancaire mensuel", "fee": "10 DH", "notes": "Relevé imprimé en agence" }
                   ]
                 }
               }
