@@ -19,7 +19,7 @@
                     "items": { "$ref": "#/components/schemas/Service" }
                   },
                   "example": [
-                    { "name": "Carte Mastercard", "category": "Carte", "description": "Prix d'achat de la carte Mastercard" },
+                    { "name": "Carte Mastercard", "category": "Carte", "description": "Prrrrix d'achat de la carte Mastercard" },
                     { "name": "Retrait GAB", "category": "Carte", "description": "Retrait d'argent via guichet automatique" },
                     { "name": "Activation e-carte", "category": "Carte", "description": "Activation de la carte virtuelle internationale" },
                     { "name": "Paiement de factures", "category": "Facturation", "description": "Paiement de factures eau, électricité, etc." }
@@ -45,7 +45,7 @@
                   "example": [
                     { "service": "Carte Mastercard", "fee": "49 DH", "notes": "Achat initial" },
                     { "service": "Inscription", "fee": "18 DH", "notes": "Demande d'inscription" },
-                    { "service": "Finalisation inscription", "fee": "12 DH", "notes": "Paiement en agence" },
+                    { "service": "Finalisation inscription", "fee": "18 DH", "notes": "Paiement en agence" },
                     { "service": "Relevé bancaire mensuel", "fee": "10 DH", "notes": "Relevé imprimé en agence" }
                   ]
                 }
