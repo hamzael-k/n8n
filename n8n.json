@@ -8,7 +8,7 @@
     "paths": {
       "/services": {
         "get": {
-          "summary": "List of services offered",
+          "summary": "list of services offered",
           "responses": {
             "200": {
               "description": "Array of services",
@@ -116,7 +116,7 @@
                     { "service": "Ouverture de compte", "fee": "Gratuit", "availability": "En agence" },
                     { "service": "Fermeture de compte", "fee": "Gratuit", "availability": "En agence" },
                     { "service": "Dépôt argent sur compte", "fee": "Gratuit", "availability": "Application + Agence" },
-                    { "service": "Relevé bancaire trimestriel", "fee": "12 DH", "availability": "En agence" }
+                    { "service": "Relevé bancaire trimestriel", "fee": "11 DH", "availability": "En agence" }
                   ]
                 }
               }
