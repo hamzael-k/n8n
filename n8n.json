@@ -1,119 +1,120 @@
-      "/services": {
-        "get": {
-          "summary": "list of services offered",
-          "responses": {
-            "200": {
-              "description": "Array of services",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": { "$ref": "#/components/schemas/Service" }
-                  },
-                  "example": [
-                    { "name": "Carte Mastercard", "category": "Carte", "description": "Prrrrix d'achat de la carte Mastercard" },
-                    { "name": "Retrait GAB", "category": "Carte", "description": "Retrait d'argent via guichet automatique" },
-                    { "name": "Activation e-carte", "category": "Carte", "description": "Activation de la carte virtuelle internationale" },
-                    { "name": "Paiement de factures", "category": "Facturation", "description": "Paiement de factures eau, électricité, etc." }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "/pricing": {
-        "get": {
-          "summary": "Service pricing details",
-          "responses": {
-            "200": {
-              "description": "Array of pricing info",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": { "$ref": "#/components/schemas/Pricing" }
-                  },
-                  "example": [
-                    { "service": "Carte Mastercard", "fee": "49 DH", "notes": "Achat initial" },
-                    { "service": "Inscription", "fee": "18 DH", "notes": "Demande d'inscription" },
-                    { "service": "Finalisation inscription", "fee": "18 DH", "notes": "Paiement en agence" },
-                    { "service": "Relevé bancaire mensuel", "fee": "10 DH", "notes": "Relevé imprimé en agence" }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "/delivery": {
-        "get": {
-          "summary": "Parcel delivery pricing",
-          "responses": {
-            "200": {
-              "description": "Array of delivery pricing",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": { "$ref": "#/components/schemas/Delivery" }
-                  },
-                  "example": [
-                    { "region": "Même Ville", "weightRange": "1-5 KG", "price": "20 DH", "type": "Livraison à domicile" },
-                    { "region": "Autre Ville", "weightRange": "6-10 KG", "price": "30 DH", "type": "Livraison à domicile" },
-                    { "region": "Laâyoune/Dakhla", "weightRange": "11-20 KG", "price": "85 DH", "type": "Livraison agence relais" }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "/money-transfer": {
-        "get": {
-          "summary": "Money transfer fee information",
-          "responses": {
-            "200": {
-              "description": "Array of transfer fees",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": { "$ref": "#/components/schemas/Transfer" }
-                  },
-                  "example": [
-                    { "method": "Envoi cash agence", "amountRange": "1-1000 DH", "fee": "110 DH" },
-                    { "method": "Envoi virement bancaire", "amountRange": "3001-5000 DH", "fee": "352 DH" },
-                    { "method": "Vers compte CashPlus", "amountRange": "1-1000 DH", "fee": "3 DH" }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "/account-services": {
-        "get": {
-          "summary": "Account-related services and fees",
-          "responses": {
-            "200": {
-              "description": "Array of account services",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": { "$ref": "#/components/schemas/AccountService" }
-                  },
-                  "example": [
-                    { "service": "Ouverture de compte", "fee": "Gratuit", "availability": "En agence" },
-                    { "service": "Fermeture de compte", "fee": "Gratuit", "availability": "En agence" },
-                    { "service": "Dépôt argent sur compte", "fee": "Gratuit", "availability": "Application + Agence" },
-                    { "service": "Relevé bancaire trimestriel", "fee": "11 DH", "availability": "En agence" }
-                  ]
-                }
-              }
+{
+  "/services": {
+    "get": {
+      "summary": "List of services offered",
+      "responses": {
+        "200": {
+          "description": "Array of services",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": { "$ref": "#/components/schemas/Service" }
+              },
+              "example": [
+                { "name": "Carte Mastercard", "category": "Carte", "description": "Prix d'achat de la carte Mastercard" },
+                { "name": "Retrait GAB", "category": "Carte", "description": "Retrait d'argent via guichet automatique" },
+                { "name": "Activation e-carte", "category": "Carte", "description": "Activation de la carte virtuelle internationale" },
+                { "name": "Paiement de factures", "category": "Facturation", "description": "Paiement de factures eau, électricité, etc." }
+              ]
             }
           }
         }
       }
-   
+    }
+  },
+  "/pricing": {
+    "get": {
+      "summary": "Service pricing details",
+      "responses": {
+        "200": {
+          "description": "Array of pricing info",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": { "$ref": "#/components/schemas/Pricing" }
+              },
+              "example": [
+                { "service": "Carte Mastercard", "fee": "49 DH", "notes": "Achat initial" },
+                { "service": "Inscription", "fee": "18 DH", "notes": "Demande d'inscription" },
+                { "service": "Finalisation inscription", "fee": "18 DH", "notes": "Paiement en agence" },
+                { "service": "Relevé bancaire mensuel", "fee": "10 DH", "notes": "Relevé imprimé en agence" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "/delivery": {
+    "get": {
+      "summary": "Parcel delivery pricing",
+      "responses": {
+        "200": {
+          "description": "Array of delivery pricing",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": { "$ref": "#/components/schemas/Delivery" }
+              },
+              "example": [
+                { "region": "Même Ville", "weightRange": "1-5 KG", "price": "20 DH", "type": "Livraison à domicile" },
+                { "region": "Autre Ville", "weightRange": "6-10 KG", "price": "30 DH", "type": "Livraison à domicile" },
+                { "region": "Laâyoune/Dakhla", "weightRange": "11-20 KG", "price": "85 DH", "type": "Livraison agence relais" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "/money-transfer": {
+    "get": {
+      "summary": "Money transfer fee information",
+      "responses": {
+        "200": {
+          "description": "Array of transfer fees",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": { "$ref": "#/components/schemas/Transfer" }
+              },
+              "example": [
+                { "method": "Envoi cash agence", "amountRange": "1-1000 DH", "fee": "110 DH" },
+                { "method": "Envoi virement bancaire", "amountRange": "3001-5000 DH", "fee": "352 DH" },
+                { "method": "Vers compte CashPlus", "amountRange": "1-1000 DH", "fee": "3 DH" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "/account-services": {
+    "get": {
+      "summary": "Account-related services and fees",
+      "responses": {
+        "200": {
+          "description": "Array of account services",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": { "$ref": "#/components/schemas/AccountService" }
+              },
+              "example": [
+                { "service": "Ouverture de compte", "fee": "Gratuit", "availability": "En agence" },
+                { "service": "Fermeture de compte", "fee": "Gratuit", "availability": "En agence" },
+                { "service": "Dépôt argent sur compte", "fee": "Gratuit", "availability": "Application + Agence" },
+                { "service": "Relevé bancaire trimestriel", "fee": "11 DH", "availability": "En agence" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
