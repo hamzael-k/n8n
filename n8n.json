@@ -1,11 +1,3 @@
-{
-    "openapi": "3.0.0",
-    "info": {
-      "title": "CashPlus Services API",
-      "version": "1.0.0",
-      "description": "API exposing CashPlus services, fees, and pricing information"
-    },
-    "paths": {
       "/services": {
         "get": {
           "summary": "list of services offered",
@@ -170,5 +162,5 @@
         }
       }
     }
-  }
+
   
